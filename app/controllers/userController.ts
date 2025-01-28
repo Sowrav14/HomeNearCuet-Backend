@@ -74,8 +74,8 @@ const Login : RequestHandler = async (req: Request, res: Response) => {
     }
 }
 
-const Uploadimage : RequestHandler = async (req: any, res: any) => {
-    const userid = req.body.userid;
+const Uploadprofile : RequestHandler = async (req: any, res: any) => {
+    const userid = req.params.id;
     const image = req.file;
 
     try{
@@ -134,5 +134,5 @@ const Uploadimage : RequestHandler = async (req: any, res: any) => {
 export {
     Signup,
     Login,
-    Uploadimage
+    Uploadprofile
 }

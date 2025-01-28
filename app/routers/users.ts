@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import validate from "../middlewares/signup";
-import { Login, Signup, Uploadimage } from "../controllers/userController";
+import { Login, Signup, Uploadprofile } from "../controllers/userController";
 import upload from "../middlewares/multer";
 
 
@@ -14,7 +14,7 @@ userRouter.get('/', (req : Request, res : Response) => {
 })
 userRouter.post('/singup', validate, Signup);
 userRouter.post('/login', Login);
-userRouter.post('/uploadProfile', upload,  Uploadimage);
+userRouter.post('/uploadProfile/:id', upload,  Uploadprofile);
 
 
 module.exports = userRouter;

@@ -9,7 +9,10 @@ interface IUser {
 interface IProperty {
     title: string;
     description: string;
+    type: "day" | "month";
     price: number;
+    vacancies: number;
+    amneties: string[];
     location: string;
     ownerID : string;
 }

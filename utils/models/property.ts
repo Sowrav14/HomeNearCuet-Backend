@@ -13,9 +13,22 @@ const propertySchema = new Schema<IProperty> (
             type: String,
             required: true
         },
+        type : {
+            type: String,
+            enum : ["day", "month"],
+            required: true
+        },
         price: {
             type: Number,
             required: true
+        },
+        vacancies:{
+            type: Number,
+            required: true
+        },
+        amneties : {
+            type : [String],
+            required : true
         },
         location: {
             type: String,
